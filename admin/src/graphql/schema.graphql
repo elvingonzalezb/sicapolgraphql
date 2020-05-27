@@ -1,0 +1,43 @@
+type Query {
+        funcionarios: [Funcionario]
+    }
+    type Funcionario {
+        _id: ID
+        CEDULA: String
+        APELLIDOS: String
+        NOMBRES: String        
+        DES_JER: String
+        CARGO: String
+        NOM_REGION: String
+        NOM_COMISA: String
+        DES_STATUS: String
+        TIP_TRAB: String
+    }
+
+    type Mutation {
+        registrarFuncionario(
+            CEDULA: String
+            APELLIDOS: String
+            NOMBRES: String        
+            DES_JER: String
+            CARGO: String
+            NOM_REGION: String
+            NOM_COMISA: String
+            DES_STATUS: String
+            TIP_TRAB: String
+        ): Funcionario
+        
+        eliminarFuncionario(_id: ID): Funcionario
+        
+        actualizarFuncionario(_id: ID, 
+            CEDULA: String
+            APELLIDOS: String
+            NOMBRES: String        
+            DES_JER: String
+            CARGO: String
+            NOM_REGION: String
+            NOM_COMISA: String
+            DES_STATUS: String
+            TIP_TRAB: String
+        ): Funcionario
+    }
